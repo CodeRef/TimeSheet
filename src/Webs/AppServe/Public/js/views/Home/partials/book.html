@@ -1,0 +1,12 @@
+﻿<ul>
+    <li ng-repeat="book in books">
+    
+     <p>{{book.Shelf.Name}}</p>  
+        <ul>
+            <li ng-repeat="userbook in book.UserBooks">
+                <img src="../../../../../Content/Images/Books/{{userbook.Picture}}" title="{{userbook.Name}}" />
+                <p>{{userbook.Name}}</p>
+            </li>
+        </ul>
+    </li>
+</ul>

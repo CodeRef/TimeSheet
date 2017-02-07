@@ -1,0 +1,123 @@
+﻿<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-6">
+            <h2>Maps Individual</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a ng-href="#/">Home</a>
+                </li>
+                <li class="active">
+                    <strong>Maps Individual</strong>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="wrapper wrapper-content">
+        <div class="map-container">
+            <div class="tool-setting" style="display:none;">
+                <h2>Zone</h2>
+                <div class="item clearfix">
+                    <label for="">ID</label>
+                    <div>
+                        <input type="text" placeholder="ss-1f-ev-01">
+                    </div>
+                </div>
+                <div class="item clearfix">
+                    <label for="">Name</label>
+                    <div>
+                        <input type="text" placeholder="Elevator 1">
+                    </div>
+                </div>
+                <div class="item clearfix">
+                    <label for="">Type</label>
+                    <div>
+                        <div class="dropdown">
+                            <button aria-expanded="true" aria-haspopup="true" data-toggle="dropdown" id="dropdownMenu1" type="button" class="btn btn-default dropdown-toggle">
+                                <span class="text">Restaurant</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+                                <li><a href="#">Restaurant</a></li>
+                                <li><a href="#">Fashion</a></li>
+                                <li><a href="#">Food &amp; Drink</a></li>
+                                <li><a href="#">Furniture</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="item clearfix">
+                    <label for="">Color</label>
+                    <div>
+                        <div class="dropdown">
+                            <button aria-expanded="true" aria-haspopup="true" data-toggle="dropdown" id="dropdownMenu1" type="button" class="btn btn-default dropdown-toggle">
+                                <span style="background-color:#ecaa2b;" class="color"></span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+                                <li><a href="#"><span style="background-color:#ecaa2b;" class="color"></span></a></li>
+                                <li><a href="#"><span style="background-color:#765c92;" class="color"></span></a></li>
+                                <li><a href="#"><span style="background-color:#87cb38;" class="color"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item clearfix">
+                    <label for="">Features</label>
+                    <div>
+                        <div class="link-item">
+                            SS-1F-LN-ST-NW
+                            <button><i class="fa fa-close"></i></button>
+                        </div>
+                        <div class="link-item">
+                            SS-1F-LN-ST-NW
+                            <button><i class="fa fa-close"></i></button>
+                        </div>
+                        <div class="link-item">
+                            SS-1F-LN-ST-NW
+                            <button><i class="fa fa-close"></i></button>
+                        </div>
+                        <div class="link-item">
+                            Add Feature
+                            <button data-target="#map-zone-feature" data-toggle="modal"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item clearfix">
+                    <label for="">Note</label>
+                    <div>
+                        <textarea placeholder="Finibus ex. Aliquam non tristique nunc" id="" name="" onkeyup="textAreaAdjust(this)"></textarea>
+                    </div>
+                </div>
+
+                <div class="item clearfix">
+                    <button class="btn btn-white">Cancel</button>
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </div>
+            <div class="map-img">
+                <div style=" width:400px; height:200px; left:650px; top:150px;" class="zonebox purple">
+                    <div style="left:-5px; top:-5px;" class="dot"></div>
+                    <div style="right:-5px; top:-5px;" class="dot"></div>
+                    <div style="left:-5px; bottom:-5px;" class="dot"></div>
+                    <div style="right:-5px; bottom:-5px;" class="dot"></div>
+                </div>
+                <img alt="" src="/images/custom/map/map-1.jpg">
+            </div>
+            <div class="tools">
+                <button class="btn-map-tool"><img alt="" src="/images/custom/map/tool-zone.png"></button>
+                <button class="btn-map-tool"><img alt="" src="/images/custom/map/tool-anchor-plus.png"></button>
+                <button class="btn-map-tool"><img alt="" src="/images/custom/map/tool-anchor-minus.png"></button>
+                <button class="btn-map-tool"><img alt="" src="/images/custom/map/tool-delete.png"></button>
+                <button class="btn-map-tool"><i class="fa fa-question"></i></button>
+            </div>
+            <div class="map-zoom">
+                <button class="pull-left"><i class="fa fa-minus"></i></button>
+                <div class="track pull-left">
+                    <div class="track-button" style="left:15%;"></div>
+                </div>
+                <button class="pull-right"><i class="fa fa-plus"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+﻿@model  RestMeet.ViewModels.Register
+@{
+    Layout = "~/Views/Shared/_Layout-Full.cshtml";
+    var user = Request.QueryString["u"];
+}
+
+@section styles{
+    @Styles.Render("~/Content/Frontend-default")
+    @Styles.Render("~/Content/Frontend-Lock")
+    @Styles.Render("~/Content/Frontend-theme")
+    <style>
+        .field-validation-error {
+            color: #e80c4d;
+            font-weight: bold;
+        }
+
+        input.input-validation-error {
+            border: 1px solid #e80c4d;
+        }
+
+        .validation-summary-errors {
+            color: #e80c4d;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    </style>
+}
+
+<div class="page-lock">
+    <div class="page-logo">
+        <a href="/" style="font-size: 260%; font-weight: 600;">
+            <font color="#FFFFFF">SIAM</font><font color="red">MARKET</font>
+        </a>
+    </div>
+    <div class="page-body">
+        <img class="page-lock-img" src="../../Content/themes/metronic/assets/admin/pages/media/profile/profile.jpg" alt="">
+        <div class="page-lock-info">
+            <h1>John Nilson</h1>
+            <span class="email">
+                Co-Founder / CEO
+            </span>
+            <span class="relogin" style="color:#fff;">
+                Hello @Html.Raw(TempData["msgH1"])<br />
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;@Html.Raw(TempData["msgDetail"])<br />
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Thank you.
+            </span>
+        </div>
+    </div>
+    <div class="page-footer-custom">
+        2015 &copy; Siam Market - <a href="/corporate">Checkout our corporate page.</a>
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/bundles/Frontend-Core")
+    @Scripts.Render("~/bundles/Frontend-Plugin")
+    @Scripts.Render("~/bundles/Frontend-Script")
+    <script>
+        jQuery(document).ready(function () {
+            Metronic.init(); // init metronic core components
+            // init background slide images
+            Lock.init();
+        });
+    </script>
+}

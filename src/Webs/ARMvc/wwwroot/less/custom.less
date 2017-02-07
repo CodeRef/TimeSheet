@@ -1,0 +1,513 @@
+/*----- bootstrap overwrite -----*/
+
+.table-responsive { overflow-x:inherit;}
+.inmodal .modal-header { padding: 15px;}
+.label { margin: 0 3px; border: solid 1px #ccc;}
+
+
+
+/*----- universal -----*/
+a , a:hover , a:active , a:focus , a.active , button , button:hover , button:active , button:focus , button.active  { outline: none !important;}
+
+button , button:hover , button:focus , button:active , button.active { outline: none;}
+.clickable { cursor: pointer;}
+.v-middle { vertical-align: middle !important;}
+.no-gutter > [class*="col-"] {padding-left: 0 !important; padding-right: 0 !important;}
+.no-padding-top { padding-top: 0 !important;}
+.thai {   font-family: 'thaisans_neue_ultltregular'; font-weight: 200; font-size: 2em !important; line-height: 0.5em;}
+
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius:    @radius;
+    border-radius:         @radius;
+}
+
+/*----- side nav -----*/
+.navbar-static-side { position: fixed}
+.Logo-main {padding: 15px; display: block; border-bottom: solid 1px #666;}
+.Logo-main img { max-width: 100%; max-height: 250px;}
+.logo-main-s-img { display: none;}
+.nav-header { padding:25px; }
+
+.mini-navbar .Logo-main { text-align: center;}
+.mini-navbar .logo-main-s-img { display: block;}
+.mini-navbar .logo-main-img { display: none;}
+
+
+/*---- top part ----*/
+.time-range {  float: right; text-align: right;  padding-top: 20px;  font-weight: 200; color:#aaa }
+.time-range p { margin-bottom: 0;}
+.time-range a {color:#555 !important;  font-size: 2em; }
+.time-range .dropdown-menu { width:310px; left:inherit; right: 0; float: right; padding: 15px; text-align: center;}
+.time-range .dropdown-menu select { display:inline-block; width: auto; margin-right:10px; }
+.time-range .dropdown-menu select.fullwidth { width: 100%; margin: 0;}
+.time-range .dropdown-menu .to {  line-height: 20px; display: block; margin-bottom: 10px;}
+.time-range .dropdown-menu .btn { margin-top: 15px; width: 100%; margin: 15px 0 0 0; }
+
+/*----- table ------*/
+table.v-middle th , table.v-middle td { vertical-align: middle !important;}
+table .user-thumbs  img { width: 30px; height: 30px;}
+table .fa-caret-down { color: #ccc; padding-left: 3px; line-height: 1.4;}
+table .edit { display: block; font-size: 25px; color: #676a6c; }
+table .edit:hover { color: #000;}
+table .fa+.fa{ margin:0 3px;}
+table tr.special td { background-color: #f7fdfc;}
+table .open { position: relative;}
+table .action {display: block;}
+table .dropdown-menu { top: 30px;}
+table .action { color: #676a6c;}
+table .green { color: #6cc83f;}
+
+.table-controlpanel { padding-bottom: 20px;}
+.table-controlpanel .search{ width: 100%;}
+.table-controlpanel .form-control { height: 30px;}
+.table-controlpanel .rowsort { padding-left: 7px; padding-right: 7px; margin-left: 5px;}
+.table-controlpanel .rowsort i{ margin-left: 5px;}
+.table-controlpanel .create  {margin-bottom: 0; width: 100%;}
+.table-controlpanel .dropdown-menu { left:inherit; right: 0;}
+.table-controlpanel .dropdown-menu.left { right: inherit; left:0;}
+.table-controlpanel .dropdown-set { position: relative;}
+.table-controlpanel .dropdown-set label { padding:5px  10px 0 0;}
+.table-controlpanel .dropdown-set .dropdown-menu { left: 0; right: inherit;}
+.table-controlpanel .dropdown-set.pull-right:first-child .dropdown-menu {left: inherit; right:0;}
+.table-controlpanel .pagination-item { float: left; margin:0 5px;  min-width: 34px; height: 34px; line-height: 34px; text-align: center;}
+
+.table-controlpanel .pagination-item input {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    width: 34px;
+    height: 34px;
+    border:solid 1px #eee;
+}
+
+
+.modal-role form { border-bottom: dotted 1px #ddd; padding-bottom: 25px; margin-bottom: 25px;}
+.modal-role input {font-size: 1em;}
+.modal-role textarea { font-size: 1em; resize:none; margin-top: 10px;  height: 90px;}
+.modal-role .tabs-container {}
+.modal-role .selected-box { padding-top: 10px;}
+.modal-role .selected-box .label { margin: 0 5px 5px 0; cursor: pointer; display: inline-block; }
+.modal-role .selected-box .label .fa { padding-left: 5px;}
+
+
+/*---- profile box -----*/
+.profile-content .user-thumbs { width: 100%; text-align: center;}
+.profile-content .user-thumbs img { width:100% ; max-width: 200px;}
+.profile-information { position: relative;}
+.profile-information h4 { padding-right: 40px; overflow: hidden;}
+.profile-information p { margin-bottom: 5px;}
+.profile-information i { padding-right: 10px; width: 25px; text-align: center;}
+.profile-information .special-member {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    font-size: 0.9em;
+    text-align: center;
+}
+.profile-information .special-member img { max-width: 100%; }
+
+
+.profile-information .status {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    width: 50px;
+    font-size: 0.8em;
+    text-align: right;
+}
+.profile-information .status span { display: block; font-weight: bold; font-size: 1.1em; line-height: 0.8em;}
+.profile-information .status.active span { color: green;}
+
+
+.profile-information .edit { font-size: 0.8em; font-style: italic; text-decoration: underline;}
+
+.profile-images-crop .thumbs{
+    width: 100%;
+    height: 185px;
+    position: relative;
+    overflow: hidden;
+}
+.profile-images-crop .thumbs img {
+    max-width: 450px;
+    position: absolute;
+    margin: auto; 
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    opacity: 1;
+}
+
+.profile-desc { margin-top: 15px;}
+
+/*---- contact box ----*/
+.contactbox-information p { margin-bottom: 10px; padding-top: 10px; border-top: dotted 1px #ddd;}
+.contactbox-information i { padding-right: 10px; width: 25px; text-align: center;}
+.contact-box .btn-group { margin-top: 10px;}
+.contact-box .m-t-xs { margin-top: 10px;}
+.contact-box h3 { margin: 15px 0 5px 0;}
+.contact-box .subname { color: #aaa; margin-top: 0;}
+.contact-box .image { margin-bottom: 10px;}
+.contact-box-custom { text-align: center;}
+
+/*---- box header ----*/
+.hd-custom-tran-1 {padding: 0 15px;}
+.hd-custom-tran-1 h2{ float: left; margin:0;}
+.hd-custom-tran-1 .text-indicator { padding-right: 10px;}
+
+/*---- product box----*/
+.product-box .thumb { height: 200px; width: 100%; position: relative; overflow: hidden;}
+.product-box .thumb img {
+	max-width: 450px;
+    position: absolute;
+    margin: auto; 
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    opacity: 1;
+}
+
+
+.product-images .thumbs{ width: 100%; height: 400px; position: relative; overflow: hidden;}
+.product-images .thumbs img {
+	max-width: 850px;
+	height: 400px;
+    position: absolute;
+    margin: auto; 
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    opacity: 1;
+}
+
+
+
+.feed-activity-list .feed-element { position: relative; }
+.feed-activity-list .feed-element .action { position: absolute; right: 0; bottom: 15px;}
+.feed-activity-list .feed-element .special-member { position: absolute; right: 0; bottom: 0; width: 30px; height: 30px;}
+.feed-activity-list .feed-element .special-member img { width: 30px;}
+
+
+.chart-style-1 { position: relative;}
+.chart-style-1 .percent { position: absolute;}
+.chart-style-1 .color-box {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background: #aaa;
+}
+
+/*---- map -----*/
+
+.map-container {
+    height: 690px;
+    background:#fff;
+    position: relative;
+}
+.map-img {
+    width: 100%;
+    overflow: auto;
+    height: 690px;
+    position: relative;
+    padding: 50px 100px;
+}
+
+.map-img .node {
+    width: 50px;
+    height: 65px;
+    position: absolute;
+    background-image:url('../images/custom/map/pin-fa.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    cursor: pointer;
+}
+
+.map-img .node .icon {
+    width: 30px;
+    height: 30px;
+    left: 9px;
+    top:10px;
+    position: absolute;
+    .border-radius (@radius: 50%);
+}
+.map-img .node .icon img { width: 30px; height: 30px;}
+
+.map-img .node.fa {background-image:url('../images/custom/map/pin-fa.png');}
+.map-img .node.shop {background-image:url('../images/custom/map/pin-shop.png');}
+.map-img .node.link {background-image:url('../images/custom/map/pin-link.png');}
+
+
+.map-img .zonebox {
+    position:absolute;
+    background-image:url('../images/custom/map/pattern.png');
+    border: solid 2px #333;
+    opacity: 0.7;
+}
+.map-img .zonebox:hover { opacity: 1;}
+.map-img .zonebox .dot {
+    width: 10px;
+    height: 10px;
+    .border-radius (@radius: 50%);
+    background-color: #000;
+    position: absolute;
+}
+.map-img .zonebox.purple {background-color: rgba(122,61,193,0.2); border: solid 2px rgba(122,61,193,1);}
+.map-img .zonebox.purple .dot {background-color: rgba(122,61,193,1);}
+.map-img .zonebox.orange {background-color: rgba(208,134,16,0.2); border: solid 2px rgba(208,134,16,1);}
+.map-img .zonebox.orange .dot {background-color: rgba(208,134,16,1);}
+.map-img .zonebox.green {background-color: rgba(135,203,56,0.2); border: solid 2px rgba(135,203,56,1);}
+.map-img .zonebox.green .dot {background-color: rgba(135,203,56,1);}
+
+
+.import-map button.btn  {
+    width:100%;
+    height: 80px;
+    margin-bottom: 25px;
+    max-width: 100%;
+    padding:5px 40px;
+    font-size: 20px;
+    color: #aaa;
+    text-transform: uppercase;
+}
+.import-map button.btn:hover { background: #fdfdfd;}
+.import-map button.btn .fa { font-size: 1.6em; margin-right: 15px;}
+
+
+.tool-setting {
+    position: absolute;
+    right:0;
+    top: 0;
+    width: 320px;
+    background: #fcfcfc;
+    height: 100%;
+    border: solid 1px #ccc;
+    z-index: 1;
+    padding: 30px;
+    font-size: 14px;
+}
+.tool-setting .item {
+    padding: 15px 0;
+    border-bottom: solid 1px #ccc;
+}
+.tool-setting label {
+    width: 50px;
+    text-align: right;
+    margin:2px 20px 0 0;
+    float: left;
+    font-weight: 200;
+    color: #999;
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.tool-setting .item > div { width: 185px; float: left;}
+.tool-setting select { background: #e5e5e5; border: none; width: 100%; padding: 3px;}
+.tool-setting input {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #333;
+}
+.tool-setting .link-item {
+    background: #ddd;
+    padding: 2px 35px 2px 15px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.tool-setting .link-item:hover { background: #d5d5d5;}
+.tool-setting .link-item button {
+    position: absolute;
+    right: 7px;
+    top: 1px;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+
+.tool-setting textarea { background: none; border: none; width: 100%; height: auto;}
+.tool-setting .type { list-style: none; margin: 0; padding: 0;}
+.tool-setting .type li {
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin: 0 3px 10px 2px;
+    .border-radius (@radius: 5px);
+    cursor: pointer;
+    text-align: center;
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.tool-setting .type li.active,
+.tool-setting .type li.change,
+.tool-setting .type li:hover {background-color: rgba(0,0,0,0.1);}
+.tool-setting .type li img { max-width:90%; margin-top:2px; }
+.tool-setting .type li .fa { font-size: 25px; line-height: 40px;}
+.tool-setting .type li button { background: none; border: none;}
+.tool-setting .type.logo li { opacity: 0.8;}
+.tool-setting .type.logo li.active, .tool-setting .type.logo li:hover { opacity: 1;}
+
+.tool-setting  .dropdown button { width: 100%; background: #e5e5e5; color: #333;}
+.tool-setting  .dropdown span.color { width: 140px; height: 15px; background-color: #f00; display: inline-block; } 
+.tool-setting  .dropdown button span.text { float: left;}
+.tool-setting  .dropdown button span.color { float: left;}
+.tool-setting  .dropdown button span.caret { float: right; margin-top: 8px;}
+
+.tool-setting .dropdown-menu > li > a { line-height: inherit; padding: 5px;}
+
+
+.map-container .tools {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    width: 52px;
+}
+.btn-map-tool {
+    background: #fff;
+    border: solid 2px #ccc;
+    width: 54px;
+    height: 54px;
+    .border-radius (@radius: 50%);
+    margin-bottom: 5px;
+    color: #777;
+    font-size: 2em;
+    padding: 0;
+}
+.btn-map-tool img {max-width: 80%;}
+.btn-map-tool.facility { background: #ed991f; color: #fff; border: solid 2px  #ac711a;}
+.btn-map-tool.shop { background: #765c92; color: #fff; border: solid 2px  #452469;}
+.btn-map-tool.link { background: #87cb38; color: #fff; border: solid 2px  #598724;}
+
+.map-zoom {
+    position: absolute;
+    left: 25px;
+    background: #fff;
+    bottom: 25px;
+    width: 204px; 
+    .border-radius (@radius: 30px);
+    height: 34px;
+    border: solid 2px #ccc;
+}
+.map-zoom button {
+    background: none;
+    border: none;
+    height: 30px;
+    width: 30px;
+} 
+.map-zoom .track {
+    position: relative;
+    width: 140px;
+    height: 4px;
+    background: #666;
+    margin:12px auto;
+}
+
+.map-zoom .track-button {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: solid 1px #777;
+    top: -6px;
+    background: #fff;
+    .border-radius (@radius: 50%);
+    cursor: pointer;
+}
+.modal-add-link { list-style: none; padding: 0;}
+.modal-add-link li { float: left; margin:5px 10px;}
+.modal-add-link li button {width: 155px;}
+
+.modal-map-import { list-style: none; padding: 0;}
+.modal-map-import li { float: left; width: 48%; margin:5px 1%;}
+.modal-map-import li button {width: 100%;}
+
+/*---- Splash ----*/
+.logo-splash { text-align: center; padding: 20px;}
+.logo-splash img { max-width: 100%;}
+.spinner-container { padding: 20px 0 40px;}
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on January 18, 2013 */
+
+
+@font-face {
+    font-family: 'thaisans_neue_blackregular';
+    src: url('../fonts/thaisansneue-black-webfont.eot');src: url('../fonts/thaisansneue-black-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/thaisansneue-black-webfont.woff') format('woff'),url('../fonts/thaisansneue-black-webfont.ttf') format('truetype'),url('../fonts/thaisansneue-black-webfont.svg#thaisans_neue_blackregular') format('svg');font-weight: normal;font-style: normal;
+}
+
+@font-face {
+    font-family: 'thaisans_neuebold';
+    src: url('../fonts/thaisansneue-bold-webfont.eot');src: url('../fonts/thaisansneue-bold-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/thaisansneue-bold-webfont.woff') format('woff'),url('../fonts/thaisansneue-bold-webfont.ttf') format('truetype'),url('../fonts/thaisansneue-bold-webfont.svg#thaisans_neuebold') format('svg');font-weight: normal;font-style: normal;
+}
+
+@font-face {
+    font-family: 'thaisans_neue_extbdregular';
+    src: url('../fonts/thaisansneue-extrabold-webfont.eot');src: url('../fonts/thaisansneue-extrabold-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/thaisansneue-extrabold-webfont.woff') format('woff'),url('../fonts/thaisansneue-extrabold-webfont.ttf') format('truetype'),url('../fonts/thaisansneue-extrabold-webfont.svg#thaisans_neue_extbdregular') format('svg');font-weight: normal;font-style: normal;
+}
+
+@font-face {
+    font-family: 'thaisans_neue_extltregular';
+    src: url('../fonts/thaisansneue-extralight-webfont.eot');src: url('../fonts/thaisansneue-extralight-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/thaisansneue-extralight-webfont.woff') format('woff'),url('../fonts/thaisansneue-extralight-webfont.ttf') format('truetype'),url('../fonts/thaisansneue-extralight-webfont.svg#thaisans_neue_extltregular') format('svg');font-weight: normal;font-style: normal;
+}
+
+@font-face {
+    font-family: 'thaisans_neue_lightregular';
+    src: url('../fonts/thaisansneue-light-webfont.eot');src: url('../fonts/thaisansneue-light-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/thaisansneue-light-webfont.woff') format('woff'),url('../fonts/thaisansneue-light-webfont.ttf') format('truetype'),url('../fonts/thaisansneue-light-webfont.svg#thaisans_neue_lightregular') format('svg');font-weight: normal;font-style: normal;
+}
+
+@font-face {
+    font-family: 'thaisans_neueregular';
+    src: url('../fonts/thaisansneue-regular-webfont.eot');src: url('../fonts/thaisansneue-regular-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/thaisansneue-regular-webfont.woff') format('woff'),url('../fonts/thaisansneue-regular-webfont.ttf') format('truetype'),url('../fonts/thaisansneue-regular-webfont.svg#thaisans_neueregular') format('svg');font-weight: normal;font-style: normal;
+}
+
+@font-face {
+    font-family: 'thaisans_neue_sembdregular';
+    src: url('../fonts/thaisansneue-semibold-webfont.eot');src: url('../fonts/thaisansneue-semibold-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/thaisansneue-semibold-webfont.woff') format('woff'),url('../fonts/thaisansneue-semibold-webfont.ttf') format('truetype'),url('../fonts/thaisansneue-semibold-webfont.svg#thaisans_neue_sembdregular') format('svg');font-weight: normal;font-style: normal;
+}
+
+@font-face {
+    font-family: 'thaisans_neue_ultbdregular';
+    src: url('../fonts/thaisansneue-ultrabold-webfont.eot');src: url('../fonts/thaisansneue-ultrabold-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/thaisansneue-ultrabold-webfont.woff') format('woff'),url('../fonts/thaisansneue-ultrabold-webfont.ttf') format('truetype'),url('../fonts/thaisansneue-ultrabold-webfont.svg#thaisans_neue_ultbdregular') format('svg');font-weight: normal;font-style: normal;
+}
+
+@font-face {
+    font-family: 'thaisans_neue_ultltregular';
+    src: url('../fonts/thaisansneue-ultralight-webfont.eot');src: url('../fonts/thaisansneue-ultralight-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/thaisansneue-ultralight-webfont.woff') format('woff'),url('../fonts/thaisansneue-ultralight-webfont.ttf') format('truetype'),url('../fonts/thaisansneue-ultralight-webfont.svg#thaisans_neue_ultltregular') format('svg');font-weight: normal;font-style: normal;
+}
+
+
+
+@media (max-width: 992px) { 
+/*---- map ----*/
+.map-container , .map-img  { height: 590px;}
+}
+@media (max-width: 768px)  { 
+/*--- table ----*/
+.table-controlpanel > div { margin-bottom: 10px;}
+.table-controlpanel .btn-group { width: 100%;}
+.table-controlpanel .create { margin-right: 0;}
+
+}
+@media (max-width: 480px)  {
+
+/*--- main ----*/
+#page-wrapper { padding: 0 10px;}	
+.modal-body { padding:15px 15px 15px;}
+.tabs-container .panel-body { padding:20px 10px;}
+/*---- profile-content -----*/
+.profile-content .user-thumbs { margin-bottom: 20px;}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
+	{ padding:0 5px;}
+
+/*---- box-header ---*/
+.hd-custom-tran-1 {padding: 0 5px;}	
+
+/*---- map ----*/
+.map-container , .map-img  { height: 500px;}
+
+}
+

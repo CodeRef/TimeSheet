@@ -1,0 +1,68 @@
+﻿
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+
+<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+
+
+<#
+	var fileManager = EntityFrameworkTemplateFileManager.Create(this);
+
+	  fileManager.StartHeader();
+    foreach (string name in this.GetNames())   
+    {
+		CreateDir(name);
+	    fileManager.StartNewFile(name+"Index.cs");
+#>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace RestMeet.Areas.Backend.Controllers
+{
+    public class <#= name #>Controller : Controller
+    {
+        // GET: Backend/<#= name #> 
+        public ActionResult Index()
+        {
+            return View();
+        }
+    }
+}
+<# 
+    }
+	fileManager.Process();
+#>
+
+<#+
+    public List<string> GetNames()
+    {
+        List<string> result = new List<string>(); 
+        XmlDocument doc = new XmlDocument();
+        string absolutePath = Path.GetFullPath(@"C:\DevGeek\restmeet\tools\Template-Helper\Controllers.xml");                
+        doc.Load(absolutePath);
+        foreach (XmlNode node in doc.SelectNodes("/root/controller"))
+        {
+            result.Add(node.Attributes["Name"].InnerText);
+        }
+        return result;
+    }
+	public void CreateDir(string subPath){
+	//string subPath ="ImagesPath"; // your code goes here
+		bool exists = System.IO.Directory.Exists(@"C:\DevGeek\restmeet\tools\Template-Helper\Views\"+subPath);
+
+		if(!exists)
+			System.IO.Directory.CreateDirectory(@"C:\DevGeek\restmeet\tools\Template-Helper\Views\"+subPath);	
+		var outputFilePath=@"C:\DevGeek\restmeet\tools\Template-Helper\Views\"+subPath+@"\Index.cshtml";
+		var content=System.IO.File.ReadAllText(@"C:\DevGeek\restmeet\tools\Template-Helper\cshtml-template.txt");
+		content=content.Replace("{{NAME}}",subPath);
+		File.WriteAllText(outputFilePath,content); 
+	}
+#>

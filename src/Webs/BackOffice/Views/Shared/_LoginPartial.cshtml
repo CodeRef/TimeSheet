@@ -1,0 +1,62 @@
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    
+
+@*<ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    </ul>*@
+    <li class="dropdown dropdown-user">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+            <img alt="" class="img-circle" src="~/Content/themes/metronic/assets/admin/layout/img/avatar.png" />
+            <span class="username" title="Manage">@User.Identity.Name </span>
+            <i class="fa fa-angle-down"></i>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="@Url.Action("Profile", "Home")">
+                    <i class="icon-user"></i>My Profile </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Manage", "Account")">
+                    <i class="icon-user"></i>Change Password </a>
+            </li>
+
+            <li>
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                {
+                    @Html.AntiForgeryToken()
+                                        
+                }
+                <a href="javascript:document.getElementById('logoutForm').submit()" style="font-size: 14px; font-weight: 300; color: #555; padding: 6px 0 6px 13px">
+                    <i class="icon-key"></i>Log out </a>
+            </li>
+        </ul>
+    </li>
+    
+    
+    
+
+
+}
+else
+{
+    <li class="dropdown" style="margin-left: 5px">
+        <ul class="nav navbar-nav navbar-right">
+            @*<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>*@
+
+            @*<li><a href="@Url.Action("Register", "Account")" id="registerLink" class="dropdown-toggle" style="padding-right: 10px;" >
+                                
+                                <span id="loginLink" style="color: #999999; font-size: 13px; font-weight: 300;">Log in</span>
+                            </a></li>*@
+            <li><a href="@Url.Action("Login", "Account")" id="loginLink" class="dropdown-toggle" style="padding-right: 10px;" >
+                <i class="icon-user"></i>
+                <span id="loginLink" style="color: #999999; font-size: 13px; font-weight: 300;">Log in</span>
+            </a></li>
+        </ul>
+    </li>
+}

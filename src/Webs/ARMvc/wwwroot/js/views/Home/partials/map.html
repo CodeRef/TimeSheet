@@ -1,0 +1,106 @@
+﻿<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-6">
+            <h2>Maps Individual</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a ng-href="#/">Home</a>
+                </li>
+                <li class="active">
+                    <strong>Maps Individual</strong>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="wrapper wrapper-content">
+        <div class="map-container">
+            <div class="tool-setting" style="display:none;">
+                <h2>Facility</h2>
+                <div class="item clearfix">
+                    <label for="">ID</label>
+                    <div>
+                        <input type="text" placeholder="ss-1f-ev-01">
+                    </div>
+                </div>
+                <div class="item clearfix">
+                    <label for="">Name</label>
+                    <div>
+                        <input type="text" placeholder="Elevator 1">
+                    </div>
+                </div>
+
+                <div class="item clearfix">
+                    <label for="">Type</label>
+                    <div>
+                        <ul class="type">
+                            <li class="active"><img alt="" src="../images/custom/map/icn-fa-default.png"></li>
+                            <li><img alt="" src="../images/custom/map/icn-fa-atm.png"></li>
+                            <li><img alt="" src="../images/custom/map/icn-fa-info.png"></li>
+                            <li><img alt="" src="../images/custom/map/icn-fa-rest.png"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item clearfix">
+                    <label for="">Note</label>
+                    <div>
+                        <textarea placeholder="Finibus ex. Aliquam non tristique nunc" id="" name="" onkeyup="textAreaAdjust(this)"></textarea>
+                    </div>
+                </div>
+
+                <div class="item clearfix">
+                    <button class="btn btn-white">Cancel</button>
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </div>
+
+            <div class="map-img">
+                <div style="left:650px; top:150px;" class="node fa">
+                    <div class="icon">
+                        <img alt="" src="../images/custom/map/icn-fa-info.png">
+                    </div>
+                </div>
+
+                <div style="left:450px; top:350px;" class="node link">
+                    <div class="icon">
+                        <img alt="" src="../images/custom/map/icn-link-es.png">
+                    </div>
+                </div>
+
+
+                <div style="left:650px; top:550px;" class="node shop">
+                    <div class="icon">
+                        <img alt="" src="../images/custom/map/icn-shop-default.png">
+                    </div>
+                </div>
+
+
+                <div style="left:350px; top:150px;" class="node fa">
+                    <div class="icon">
+                        <img alt="" src="../images/custom/map/icn-fa-atm.png">
+                    </div>
+                </div>
+
+
+                <img alt="" src="../images/custom/map/map-1.jpg">
+            </div>
+
+            <div class="tools">
+                <button style="font-size:13px;" class="btn-map-tool"><i class="fa fa-circle"></i></button>
+                <button class="btn-map-tool"><img alt="" src="../images/custom/map/tool-edge.png"></button>
+                <button class="btn-map-tool facility"><i class="fa fa-building-o"></i></button>
+                <button class="btn-map-tool shop"><img alt="" src="../images/custom/map/tool-shop.png"></button>
+                <button class="btn-map-tool link"><i class="fa fa-link"></i></button>
+                <button class="btn-map-tool"><i class="fa fa-question"></i></button>
+            </div>
+
+            <div class="map-zoom">
+                <button class="pull-left"><i class="fa fa-minus"></i></button>
+                <div class="track pull-left">
+                    <div class="track-button" style="left:15%;"></div>
+                </div>
+                <button class="pull-right"><i class="fa fa-plus"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

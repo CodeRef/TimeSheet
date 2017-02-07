@@ -1,0 +1,4 @@
+﻿
+ 
+— This line is a common header to use in every generated file.
+

@@ -1,0 +1,35 @@
+﻿<!-- BEGIN FORGOT PASSWORD FORM -->
+<form class="forget-form" ng-hide="savedSuccessfully">
+    <h3>Forget Password ?</h3>
+    <p>
+        Enter your e-mail address below to reset your password.
+    </p>
+    <div class="form-group">
+        <div class="input-icon">
+            <i class="fa fa-envelope"></i>
+            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" data-ng-model="forgotPassData.Email" />
+        </div>
+    </div>
+    <div class="form-actions">
+        <button type="button" id="back-btn" class="btn" ng-click="back()">
+            <i class="m-icon-swapleft"></i> Back
+        </button>
+        <button type="submit" class="btn blue pull-right">
+            Submit <i class="m-icon-swapright m-icon-white"></i>
+        </button>
+    </div>
+</form>
+<!-- END FORGOT PASSWORD FORM -->
+<div ng-if="savedSuccessfully">
+  <h3> Email has sent.</h3>
+    <p>
+        Please check your inbox of {{forgotPassData.Email}} to reset your password.
+        If you do not receive email please cleck <a href="#">Here</a> to resend again.
+        Thank you.
+
+
+    </p>
+    <div class="form-actions">
+        <a href="#/login" class="btn btn green pull-right">Back to Login.</a>
+    </div>
+</div>
