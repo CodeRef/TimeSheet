@@ -12,14 +12,14 @@ namespace RestMeet.Unit.Repositories
     {
         private DbConnection connection;
         private BookContext databaseContext;
-        private Repository.BookRepository objRepo;
+        private TimeTracker.Repository.BookRepository objRepo;
 
 
         public BookRepositoryTest()
         {
             connection = DbConnectionFactory.CreateTransient();
             databaseContext = new BookContext(connection);
-            objRepo = new Repository.BookRepository(databaseContext);
+            objRepo = new TimeTracker.Repository.BookRepository(databaseContext);
         }
 
         [Fact]

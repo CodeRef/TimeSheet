@@ -89,6 +89,10 @@
     <Compile Include="Migrations\201702071256422_JobTypeModel.Designer.cs">
       <DependentUpon>201702071256422_JobTypeModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702071317420_TaskModel.cs" />
+    <Compile Include="Migrations\201702071317420_TaskModel.Designer.cs">
+      <DependentUpon>201702071317420_TaskModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\data\JobTypeData.cs" />
     <Compile Include="ShelfBook.cs" />
     <Compile Include="Book.cs" />
@@ -109,6 +113,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="State.cs" />
+    <Compile Include="Task.cs" />
     <Compile Include="UserProfile.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702071256422_JobTypeModel.resx">
       <DependentUpon>201702071256422_JobTypeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702071317420_TaskModel.resx">
+      <DependentUpon>201702071317420_TaskModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

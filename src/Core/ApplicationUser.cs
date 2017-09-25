@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -10,7 +11,10 @@ namespace TimeTracker.Model
     public class ApplicationUser : IdentityUser
     {
         public string FirstName { get; set; }
+        public string MiddleName { get; set; }
         public string LastName { get; set; }
+        public DateTime BirthDay { get; set; }
+        public virtual List<Address> Address { get; set; }
         public virtual ICollection<UserProfile> UserProfiles { get; set; }
 
         //        public virtual ICollection<ToDo> ToDoes { get; set; }

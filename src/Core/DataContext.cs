@@ -27,7 +27,7 @@ namespace TimeTracker.Model
         public virtual DbSet<Shelf> Shelfs { get; set; }
         public virtual DbSet<ShelfBook> SelfBook { get; set; }
         public virtual DbSet<JobType> JobTypes { get; set; }
-
+        public virtual DbSet<TaskModel> Tasks { get; set; }
         public static DataContext Create()
         {
             return new DataContext();
