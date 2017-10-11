@@ -1,12 +1,11 @@
 ﻿using Moq;
 using Ploeh.AutoFixture;
-using RestMeet.Repository;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RestMeet.Service;
+using TimeTracker.Model;
+using TimeTracker.Repository.Common;
+using TimeTracker.Repository.IRepository;
+using TimeTracker.Service.IService;
 using Xunit;
 
 namespace RestMeet.Test.Services
@@ -15,31 +14,31 @@ namespace RestMeet.Test.Services
     {
         private Mock<IBookRepository> _bookRepository;
         private Mock<IUnitOfWork> _mockUnitWork;
-        private IBook _bookServ;
-        private List<Model.Book> bookCollection;
+        private IBookService _bookServ;
+        private List<Book> bookCollection;
         public BookServiceTest()
         {
             _bookRepository = new Mock<IBookRepository>();
             _mockUnitWork = new Mock<IUnitOfWork>();
-            _bookServ = new Service.BookService(_mockUnitWork.Object, _bookRepository.Object);
+            _bookServ = new TimeTracker.Service.BookService(_mockUnitWork.Object, _bookRepository.Object);
 
             var fixture = new Fixture();
-            var myInstances = fixture.Build<Model.Book>()
+            var myInstances = fixture.Build<Book>()
                 .Without(m => m.UpdateUser)
                 .Without(m => m.CreateUser)
                 .CreateMany(10).ToList();
-            bookCollection = new List<Model.Book>();
+            bookCollection = new List<Book>();
             bookCollection.AddRange(myInstances);
         }
         [Fact]
         public void GetAll__Expect_Collection_Of_Book_WhenCall()
         {
             //Arrange
-            IQueryable<Model.Book> queryableToDo = bookCollection.AsQueryable();//listToDo.AsQueryable();
+            IQueryable<Book> queryableToDo = bookCollection.AsQueryable();//listToDo.AsQueryable();
             _bookRepository.Setup(x => x.GetAll()).Returns(queryableToDo);
 
             //Act
-            var results = _bookServ.GetAll().ToList();
+            var results = _bookServ.All().ToList();
 
             //Assert
             Assert.NotNull(results);
@@ -50,12 +49,8 @@ namespace RestMeet.Test.Services
         {
             //Arrange
             var Id = 1;
-            var book = new Model.Book { Name = "Clean Code" };
-            _bookRepository.Setup(m => m.Add(book)).Returns((Model.Book e) =>
-            {
-                e.Id = Id;
-                return e;
-            });
+            var book = new Book { Name = "Clean Code" };
+            _bookRepository.Setup(m => m.Add(It.IsAny<Book>())).Returns(book);
 
             //Act
             _bookServ.Create(book);

@@ -54,9 +54,8 @@
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
@@ -135,13 +134,9 @@
     <Compile Include="Repositories\InMemoryContext\BaseContext.cs" />
     <Compile Include="Repositories\InMemoryContext\BookContext.cs" />
     <Compile Include="Repositories\InMemoryContext\ShopContext.cs" />
-    <Compile Include="Repositories\InMemoryContext\TodoContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BookTest.cs" />
     <Compile Include="Repositories\ShopRepositoryTest.cs" />
-    <Compile Include="Repositories\ToDoRepositoryTest.cs" />
-    <Compile Include="Services\BookServiceTest.cs" />
-    <Compile Include="Services\ToDoServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -166,6 +161,7 @@
   <ItemGroup>
     <Folder Include="Controller\" />
     <Folder Include="Model\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

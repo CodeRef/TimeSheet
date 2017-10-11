@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using RestMeet.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.Entity;
+using TimeTracker.Model;
 
 namespace RestMeet.Test
 {

@@ -1,9 +1,8 @@
-﻿using System.Data.Common;
-using System.Linq;
-using Effort;
-using RestMeet.Model;
-using RestMeet.Repository;
+﻿using Effort;
 using RestMeet.Test;
+using System.Data.Common;
+using System.Linq;
+using TimeTracker.Model;
 using Xunit;
 
 namespace RestMeet.Unit.Repositories
@@ -39,9 +38,9 @@ namespace RestMeet.Unit.Repositories
         public void Book_Repository_Create()
         {
             //Arrange
-            var c = new Model.Book { Name = "Book Z" };
+            var c = new Book { Name = "Book Z" };
             //Act
-            var result = objRepo.Add(c);
+            objRepo.Add(c);
             databaseContext.SaveChanges();
 
             var lst = objRepo.GetAll().ToList();
@@ -68,7 +67,7 @@ namespace RestMeet.Unit.Repositories
             var result = objRepo.GetAll().ToList();
 
             //Assert
-            Assert.NotNull(objRepo.Delete(result[0]));
+            objRepo.Delete(result[0]);
             databaseContext.SaveChanges();
 
             var rs = objRepo.GetAll().ToList();

@@ -1,9 +1,8 @@
-﻿using System.Data.Common;
-using System.Linq;
-using Effort;
-using RestMeet.Model;
-using RestMeet.Repository;
+﻿using Effort;
 using RestMeet.Test;
+using System.Data.Common;
+using System.Linq;
+using TimeTracker.Repository;
 using Xunit;
 
 namespace RestMeet.Unit.Repositories
