@@ -30,7 +30,6 @@ namespace TimeTracker.Model
         public virtual DbSet<TaskUser> TaskUsers { get; set; }
         public virtual DbSet<TimeLog> TimeLogs { get; set; }
        
-        //public virtual DbSet<TaskModel> Tasks { get; set; }
         public static DataContext Create()
         {
             return new DataContext();
@@ -38,7 +37,6 @@ namespace TimeTracker.Model
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Configurations.Add(new UserProfileMap());
             base.OnModelCreating(modelBuilder);
         }
     }

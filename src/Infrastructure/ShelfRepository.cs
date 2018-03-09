@@ -5,16 +5,16 @@ using TimeTracker.Repository.IRepository;
 
 namespace TimeTracker.Repository
 {
-    public class ShelfRepository : GenericRepository<Shelf>, IShelfRepository
-    {
-        public ShelfRepository(DbContext context)
-            : base(context)
-        {
-        }
+    //public class ShelfRepository : GenericRepository<Shelf>, IShelfRepository
+    //{
+    //    public ShelfRepository(DbContext context)
+    //        : base(context)
+    //    {
+    //    }
 
-        //public Model.Shelf GetById(int id)
-        //{
-        //    return _dbset.FirstOrDefault(a => a.Id == id);
-        //}
-    }
+    //    //public Model.Shelf GetById(int id)
+    //    //{
+    //    //    return _dbset.FirstOrDefault(a => a.Id == id);
+    //    //}
+    //}
 }

@@ -11,10 +11,10 @@ using TimeTracker.Repository.IRepository;
 
 namespace TimeTracker.Repository
 {
-    public class ShopRepository : GenericRepository<Prospect>, IShopRepository
-    {
-        public ShopRepository(DbContext context) : base(context)
-        {
-        }
-    }
+    //public class ShopRepository : GenericRepository<Prospect>, IShopRepository
+    //{
+    //    public ShopRepository(DbContext context) : base(context)
+    //    {
+    //    }
+    //}
 }
