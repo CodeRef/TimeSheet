@@ -10,10 +10,10 @@ using TimeTracker.Service.Common;
 
 namespace TimeTracker.Service.IService
 {
-    public interface IShopService : IEntityService<Shop>
+    public interface IShopService : IEntityService<Prospect>
     {
-        Shop GetById(int id);
+        Prospect GetById(int id);
 
-        List<Shop> GetShopOnDemand(int start, int length, Dictionary<string, string> searchKey, out int recordCount);
+        List<Prospect> GetShopOnDemand(int start, int length, Dictionary<string, string> searchKey, out int recordCount);
     }
 }

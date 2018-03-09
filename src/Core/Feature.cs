@@ -7,6 +7,6 @@ namespace TimeTracker.Model
     public class Feature : AuditableEntity<Guid>
     {
         public string Name { get; set; }
-        public List<TaskModel> Tasks { get; set; }
+        public virtual List<TaskModel> Tasks { get; set; }
     }
 }

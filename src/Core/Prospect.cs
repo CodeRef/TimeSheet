@@ -1,13 +1,14 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using TimeTracker.Model.Common;
 
 namespace TimeTracker.Model
 {
-    public class Shop : AuditableEntity<int>
+    public class Prospect : AuditableEntity<int>
     {
         //public int? ShopGroupId { get; set; }
         //public virtual ShopGroup ShopGroup { get; set; }
-        [StringLength(64)]
+        [StringLength(200)]
         public string Name { get; set; }
 
         //// public virtual Category Category { get; set; }
@@ -18,7 +19,7 @@ namespace TimeTracker.Model
         public bool IsActive { get; set; }
 
         public bool IsDeleted { get; set; }
-        public bool IsPublished { get; set; }
+        public List<Address> Contacts { get; set; }
         //public virtual List<Store> Stores { get; set; }
         //public virtual List<Employee> Employees { get; set; }
         //public virtual List<Contact> Contacts { get; set; }

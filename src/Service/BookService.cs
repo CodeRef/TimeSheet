@@ -31,8 +31,9 @@ namespace TimeTracker.Service
 
         public Project GetByIsbn(string isbn)
         {
-            var obj = _bookRepo.Find(a => a.ISBN.Trim().Equals(isbn.Trim()));
-            return obj;
+            //var obj = _bookRepo.Find(a => a.ISBN.Trim().Equals(isbn.Trim()));
+            return null;
+            //return obj;
         }
     }
 }

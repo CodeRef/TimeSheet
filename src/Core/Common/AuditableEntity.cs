@@ -13,14 +13,14 @@ namespace TimeTracker.Model.Common
         public virtual ApplicationUser UpdateUser { get; set; }
 
         [ScaffoldColumn(false)]
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         [MaxLength(256)]
         [ScaffoldColumn(false)]
         public string CreatedBy { get; set; }
 
         [ScaffoldColumn(false)]
-        public DateTime UpdatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; } = DateTime.Now;
 
         [MaxLength(256)]
         [ScaffoldColumn(false)]

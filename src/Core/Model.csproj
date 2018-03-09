@@ -81,60 +81,78 @@
   <ItemGroup>
     <Compile Include="Address.cs" />
     <Compile Include="Feature.cs" />
+    <Compile Include="FeatureUser.cs" />
     <Compile Include="JobType.cs" />
-    <Compile Include="Migrations\201702071236447_RemoveAuther.cs" />
-    <Compile Include="Migrations\201702071236447_RemoveAuther.Designer.cs">
-      <DependentUpon>201702071236447_RemoveAuther.cs</DependentUpon>
+    <Compile Include="Migrations\201803091718296_db01.cs" />
+    <Compile Include="Migrations\201803091718296_db01.Designer.cs">
+      <DependentUpon>201803091718296_db01.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702071256422_JobTypeModel.cs" />
-    <Compile Include="Migrations\201702071256422_JobTypeModel.Designer.cs">
-      <DependentUpon>201702071256422_JobTypeModel.cs</DependentUpon>
+    <Compile Include="Migrations\201803091731479_project.cs" />
+    <Compile Include="Migrations\201803091731479_project.Designer.cs">
+      <DependentUpon>201803091731479_project.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702071317420_TaskModel.cs" />
-    <Compile Include="Migrations\201702071317420_TaskModel.Designer.cs">
-      <DependentUpon>201702071317420_TaskModel.cs</DependentUpon>
+    <Compile Include="Migrations\201803091739199_project-user.cs" />
+    <Compile Include="Migrations\201803091739199_project-user.Designer.cs">
+      <DependentUpon>201803091739199_project-user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803091810022_project-feature-task.cs" />
+    <Compile Include="Migrations\201803091810022_project-feature-task.Designer.cs">
+      <DependentUpon>201803091810022_project-feature-task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803091818243_db005.cs" />
+    <Compile Include="Migrations\201803091818243_db005.Designer.cs">
+      <DependentUpon>201803091818243_db005.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\data\JobTypeData.cs" />
-    <Compile Include="ShelfBook.cs" />
+    <Compile Include="ProjectUser.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Common\AuditableEntity.cs" />
     <Compile Include="Common\Entity.cs" />
     <Compile Include="Common\IAuditableEntity.cs" />
     <Compile Include="Common\IEntity.cs" />
     <Compile Include="Country.cs" />
-    <Compile Include="Map\UserProfileMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ApplicationUser.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Shelf.cs" />
-    <Compile Include="Shop.cs" />
+    <Compile Include="Prospect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataContext.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="State.cs" />
     <Compile Include="Task.cs" />
-    <Compile Include="UserProfile.cs" />
+    <Compile Include="TaskUser.cs" />
+    <Compile Include="TimeLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="DbDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702071236447_RemoveAuther.resx">
-      <DependentUpon>201702071236447_RemoveAuther.cs</DependentUpon>
+    <Folder Include="Map\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803091718296_db01.resx">
+      <DependentUpon>201803091718296_db01.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702071256422_JobTypeModel.resx">
-      <DependentUpon>201702071256422_JobTypeModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803091731479_project.resx">
+      <DependentUpon>201803091731479_project.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702071317420_TaskModel.resx">
-      <DependentUpon>201702071317420_TaskModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803091739199_project-user.resx">
+      <DependentUpon>201803091739199_project-user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803091810022_project-feature-task.resx">
+      <DependentUpon>201803091810022_project-feature-task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803091818243_db005.resx">
+      <DependentUpon>201803091818243_db005.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

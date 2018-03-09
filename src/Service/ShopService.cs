@@ -14,7 +14,7 @@ using TimeTracker.Service.IService;
 
 namespace TimeTracker.Service
 {
-    public class ShopService : EntityService<Shop>, IShopService
+    public class ShopService : EntityService<Prospect>, IShopService
     {
         private readonly IShopRepository _shopRepo;
 
@@ -23,12 +23,12 @@ namespace TimeTracker.Service
             _shopRepo = shopRepository;
         }
 
-        public Shop GetById(int id)
+        public Prospect GetById(int id)
         {
             return _shopRepo.Find(a => a.Id == id);
         }
 
-        public List<Shop> GetShopOnDemand(int start, int length, Dictionary<string, string> searchKey,
+        public List<Prospect> GetShopOnDemand(int start, int length, Dictionary<string, string> searchKey,
             out int recordCount)
         {
             //recordCount = 0;

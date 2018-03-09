@@ -7,13 +7,13 @@ namespace TimeTracker.Model.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class JobTypeModel : IMigrationMetadata
+    public sealed partial class project : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(JobTypeModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(project));
         
         string IMigrationMetadata.Id
         {
-            get { return "201702071256422_JobTypeModel"; }
+            get { return "201803091731479_project"; }
         }
         
         string IMigrationMetadata.Source

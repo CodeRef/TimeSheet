@@ -7,13 +7,13 @@ namespace TimeTracker.Model.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class TaskModel : IMigrationMetadata
+    public sealed partial class db01 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(TaskModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(db01));
         
         string IMigrationMetadata.Id
         {
-            get { return "201702071317420_TaskModel"; }
+            get { return "201803091718296_db01"; }
         }
         
         string IMigrationMetadata.Source

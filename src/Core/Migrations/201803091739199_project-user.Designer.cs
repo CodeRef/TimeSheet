@@ -7,13 +7,13 @@ namespace TimeTracker.Model.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class RemoveAuther : IMigrationMetadata
+    public sealed partial class projectuser : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(RemoveAuther));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(projectuser));
         
         string IMigrationMetadata.Id
         {
-            get { return "201702071236447_RemoveAuther"; }
+            get { return "201803091739199_project-user"; }
         }
         
         string IMigrationMetadata.Source

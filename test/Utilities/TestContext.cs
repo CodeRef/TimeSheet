@@ -31,7 +31,7 @@ namespace RestMeet.Test
         }
 
         //public DbSet<ToDo> ToDoes { get; set; }
-        public DbSet<Shop> Shops { get; set; }
+        public DbSet<Prospect> Shops { get; set; }
 
         public virtual DbSet<UserProfile> UserProfiles { get; set; }
         public virtual DbSet<Shelf> Shelfs { get; set; }
@@ -447,10 +447,10 @@ namespace RestMeet.Test
             //};
             //Context.ToDoes.AddRange(listCountry);
 
-            var listShop = new List<Shop>() {
-             new Shop() { Id = 1, Name = "Shop Q",CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now },
-             new Shop() { Id = 2, Name = "Shop W",CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now },
-             new Shop() { Id = 3, Name = "Shop B" ,CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now}
+            var listShop = new List<Prospect>() {
+             new Prospect() { Id = 1, Name = "Shop Q",CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now },
+             new Prospect() { Id = 2, Name = "Shop W",CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now },
+             new Prospect() { Id = 3, Name = "Shop B" ,CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now}
             };
             Context.Shops.AddRange(listShop);
 

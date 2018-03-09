@@ -9,7 +9,7 @@ using TimeTracker.Repository.Common;
 
 namespace TimeTracker.Repository.IRepository
 {
-    public interface IShopRepository : IGenericRepository<Shop>
+    public interface IShopRepository : IGenericRepository<Prospect>
     {
     }
 }
