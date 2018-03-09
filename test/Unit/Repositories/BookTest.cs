@@ -38,7 +38,7 @@ namespace RestMeet.Unit.Repositories
         public void Book_Repository_Create()
         {
             //Arrange
-            var c = new Book { Name = "Book Z" };
+            var c = new Project { Name = "Book Z" };
             //Act
             objRepo.Add(c);
             databaseContext.SaveChanges();

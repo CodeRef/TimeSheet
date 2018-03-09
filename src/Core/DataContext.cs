@@ -20,7 +20,7 @@ namespace TimeTracker.Model
         }
 
         public virtual DbSet<Shop> Shop { get; set; }
-        public virtual DbSet<Book> Books { get; set; }
+        public virtual DbSet<Project> Books { get; set; }
         public virtual DbSet<State> States { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<Address> Addresses { get; set; }

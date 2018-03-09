@@ -5,6 +5,8 @@ namespace TimeTracker.Model
 {
     public class Address : AuditableEntity<int>
     {
+        public string Mobile { get; set; }
+        public string Phone { get; set; }
         public string AddressText { get; set; }
         public virtual State State { get; set; }
         public virtual Country Country { get; set; }

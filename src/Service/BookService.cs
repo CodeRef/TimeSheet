@@ -8,7 +8,7 @@ using TimeTracker.Service.IService;
 
 namespace TimeTracker.Service
 {
-    public class BookService : EntityService<Book>, IBookService
+    public class BookService : EntityService<Project>, IBookService
     {
         private readonly IBookRepository _bookRepo;
 
@@ -18,18 +18,18 @@ namespace TimeTracker.Service
             _bookRepo = bookRepository;
         }
 
-        public List<Book> All()
+        public List<Project> All()
         {
             return _bookRepo.GetAll().ToList();
         }
 
-        public Book GetById(int id)
+        public Project GetById(int id)
         {
             var obj = _bookRepo.Find(a => a.Id == id);
             return obj;
         }
 
-        public Book GetByIsbn(string isbn)
+        public Project GetByIsbn(string isbn)
         {
             var obj = _bookRepo.Find(a => a.ISBN.Trim().Equals(isbn.Trim()));
             return obj;

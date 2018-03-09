@@ -4,12 +4,12 @@ using TimeTracker.Service.Common;
 
 namespace TimeTracker.Service.IService
 {
-    public interface IBookService : IEntityService<Book>
+    public interface IBookService : IEntityService<Project>
     {
-        List<Book> All();
+        List<Project> All();
 
-        Book GetById(int id);
+        Project GetById(int id);
 
-        Book GetByIsbn(string isbn);
+        Project GetByIsbn(string isbn);
     }
 }

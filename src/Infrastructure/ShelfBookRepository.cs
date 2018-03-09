@@ -14,12 +14,12 @@ namespace TimeTracker.Repository
         {
         }
 
-        public List<Book> GetByBookId(int id)
+        public List<Project> GetByBookId(int id)
         {
             return _dbset.Where(a => a.BookId == id).Select(a => a.Book).ToList();
         }
 
-        public List<Book> GetByShelfId(int id)
+        public List<Project> GetByShelfId(int id)
         {
             return _dbset.Where(a => a.ShelfId == id).Select(a => a.Book).ToList();
         }

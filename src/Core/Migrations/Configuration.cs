@@ -51,7 +51,7 @@ namespace TimeTracker.Model.Migrations
                 userManager.AddToRole(user.Id, "SuperAdmin");
             }
             var admin = context.Users.FirstOrDefault();
-            context.Books.AddOrUpdate(new Book
+            context.Books.AddOrUpdate(new Project
             {
                 Id = 1,
                 Name = "hello",
@@ -64,7 +64,7 @@ namespace TimeTracker.Model.Migrations
                 UpdatedDate = DateTime.Now,
                 PublicationDate = DateTime.Now,
                 Picture = "succeeding-with-agile-cover.jpg"
-            }, new Book
+            }, new Project
             {
                 Id = 2,
                 Name = "hello2",

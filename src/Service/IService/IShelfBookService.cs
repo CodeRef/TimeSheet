@@ -8,6 +8,6 @@ namespace TimeTracker.Service.IService
     {
         // List<Model.ShelfBook> All();
         //Model.ShelfBook GetById(int id);
-        List<Book> GetBookByShelfId(int id);
+        List<Project> GetBookByShelfId(int id);
     }
 }

@@ -5,7 +5,7 @@ using TimeTracker.Repository.IRepository;
 
 namespace TimeTracker.Repository
 {
-    public class BookRepository : GenericRepository<Book>, IBookRepository
+    public class BookRepository : GenericRepository<Project>, IBookRepository
     {
         public BookRepository(DbContext context)
             : base(context)

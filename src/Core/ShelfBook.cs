@@ -11,7 +11,7 @@ namespace TimeTracker.Model
         [ForeignKey("Book")]
         public int BookId { get; set; }
 
-        public virtual Book Book { get; set; }
+        public virtual Project Book { get; set; }
 
         [Key]
         [Column(Order = 1)]

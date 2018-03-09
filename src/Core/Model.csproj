@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
+    <Compile Include="Feature.cs" />
     <Compile Include="JobType.cs" />
     <Compile Include="Migrations\201702071236447_RemoveAuther.cs" />
     <Compile Include="Migrations\201702071236447_RemoveAuther.Designer.cs">
@@ -95,7 +96,7 @@
     </Compile>
     <Compile Include="Migrations\data\JobTypeData.cs" />
     <Compile Include="ShelfBook.cs" />
-    <Compile Include="Book.cs" />
+    <Compile Include="Project.cs" />
     <Compile Include="Common\AuditableEntity.cs" />
     <Compile Include="Common\Entity.cs" />
     <Compile Include="Common\IAuditableEntity.cs" />

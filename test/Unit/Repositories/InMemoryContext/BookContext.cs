@@ -14,7 +14,7 @@ namespace RestMeet.Test
             Configuration.LazyLoadingEnabled = false;
         }
 
-        public DbSet<Book> Books { get; set; }
+        public DbSet<Project> Books { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Suppress code first model migration check          
@@ -24,10 +24,10 @@ namespace RestMeet.Test
 
         public void Seed(BookContext Context)
         {
-            var listBook = new List<Book>() {
-             new Book() { Id = 1,ISBN="978-0-123456-47-2", Name = "Book Q",CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now },
-             new Book() { Id = 2,ISBN="978-0-123456-47-3", Name = "Book W",CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now },
-             new Book() { Id = 3,ISBN="978-0-123456-47-4",Name = "Book B" ,CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now}
+            var listBook = new List<Project>() {
+             new Project() { Id = 1,ISBN="978-0-123456-47-2", Name = "Book Q",CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now },
+             new Project() { Id = 2,ISBN="978-0-123456-47-3", Name = "Book W",CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now },
+             new Project() { Id = 3,ISBN="978-0-123456-47-4",Name = "Book B" ,CreatedDate=DateTime.Now,UpdatedDate=DateTime.Now}
             };
 
             //var fixture = new Fixture();

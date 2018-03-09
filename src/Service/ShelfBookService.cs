@@ -17,7 +17,7 @@ namespace TimeTracker.Service
             _shelfBookRepo = shelfBookRepository;
         }
 
-        public List<Book> GetBookByShelfId(int id)
+        public List<Project> GetBookByShelfId(int id)
         {
             var books = _shelfBookRepo.GetByShelfId(id);
             return books;
