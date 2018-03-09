@@ -227,3 +227,4 @@ node_modules
 
 #nuget packages 
 packages
+/.vs
