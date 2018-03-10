@@ -77,6 +77,9 @@ namespace TimeSheet.Controllers
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+
+        
+
             switch (result)
             {
                 case SignInStatus.Success:
@@ -156,6 +159,9 @@ namespace TimeSheet.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    var currentUser = UserManager.FindByName(user.UserName);
+                    var roleresult = UserManager.AddToRole(currentUser.Id, "User");
+
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
@@ -446,9 +452,17 @@ namespace TimeSheet.Controllers
 
         private ActionResult RedirectToLocal(string returnUrl)
         {
+            var userInR = User.IsInRole("User");
             if (Url.IsLocalUrl(returnUrl))
             {
                 return Redirect(returnUrl);
+            }
+            if (User.IsInRole("Admin"))
+            {
+                RedirectToAction("Index", "AdminDashboard");
+            }
+            else if (User.IsInRole("User")) {
+                RedirectToAction("Index", "Profile");
             }
             return RedirectToAction("Index", "Home");
         }
