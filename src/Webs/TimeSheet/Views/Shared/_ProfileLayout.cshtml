@@ -16,49 +16,9 @@
 
 </head>
 <body class="grey lighten-3">
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-            <div class="container">
-                <!-- Brand -->
-                <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
-                    <strong class="blue-text">MDB</strong>
-                </a>
-                @*<div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>*@
-                <!-- Collapse -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li class="nav-item">@Html.ActionLink("About", "About", "Home")</li>
-                        <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    </ul>
-                    @Html.Partial("_LoginPartial")
-                </div>
-            </div>
-        </nav>
+                @RenderBody()
 
-      
-    </header>
-    <!--Main layout-->
-    <main class="pt-5 mx-lg-5">
-        <div class="container mt-5">
-            @RenderBody()
 
-            @*<footer>
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-                </footer>*@
-        </div>
-    </main>
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="~/Content/js/jquery-3.2.1.min.js"></script>

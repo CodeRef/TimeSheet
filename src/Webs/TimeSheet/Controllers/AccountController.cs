@@ -453,6 +453,7 @@ namespace TimeSheet.Controllers
         private ActionResult RedirectToLocal(string returnUrl)
         {
             var userInR = User.IsInRole("User");
+           
             if (Url.IsLocalUrl(returnUrl))
             {
                 return Redirect(returnUrl);
