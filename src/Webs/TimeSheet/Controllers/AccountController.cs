@@ -23,7 +23,7 @@ namespace TimeSheet.Controllers
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -35,9 +35,9 @@ namespace TimeSheet.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -78,7 +78,7 @@ namespace TimeSheet.Controllers
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
 
-        
+
 
             switch (result)
             {
@@ -124,7 +124,7 @@ namespace TimeSheet.Controllers
             // If a user enters incorrect codes for a specified amount of time then the user account 
             // will be locked out for a specified amount of time. 
             // You can configure the account lockout settings in IdentityConfig
-            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent:  model.RememberMe, rememberBrowser: model.RememberBrowser);
+            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent: model.RememberMe, rememberBrowser: model.RememberBrowser);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -162,8 +162,8 @@ namespace TimeSheet.Controllers
                     var currentUser = UserManager.FindByName(user.UserName);
                     var roleresult = UserManager.AddToRole(currentUser.Id, "User");
 
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
@@ -450,10 +450,20 @@ namespace TimeSheet.Controllers
             }
         }
 
+        private string GetCurrentUserName()
+        {
+            var _userId = System.Web.HttpContext.Current.User.Identity.GetUserId();//User.Identity.IsAuthenticated ? "" : "";
+            var currentUser = _userManager.FindById(_userId);
+            return currentUser.UserName;
+        }
         private ActionResult RedirectToLocal(string returnUrl)
         {
             var userInR = User.IsInRole("User");
-           
+
+            var isInRole = System.Web.HttpContext.Current.User.IsInRole("User");//_userManager.IsInRole(System.Web.HttpContext.Current.User.Identity.GetUserId(), "User");
+
+
+
             if (Url.IsLocalUrl(returnUrl))
             {
                 return Redirect(returnUrl);
@@ -462,7 +472,8 @@ namespace TimeSheet.Controllers
             {
                 RedirectToAction("Index", "AdminDashboard");
             }
-            else if (User.IsInRole("User")) {
+            else if (User.IsInRole("User"))
+            {
                 RedirectToAction("Index", "Profile");
             }
             return RedirectToAction("Index", "Home");
