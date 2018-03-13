@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using TimeSheet.Helpers;
 using TimeSheet.Models;
 using TimeTracker.Model;
 
@@ -77,8 +79,6 @@ namespace TimeSheet.Controllers
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
-
-
 
             switch (result)
             {
@@ -449,32 +449,13 @@ namespace TimeSheet.Controllers
                 ModelState.AddModelError("", error);
             }
         }
-
-        private string GetCurrentUserName()
-        {
-            var _userId = System.Web.HttpContext.Current.User.Identity.GetUserId();//User.Identity.IsAuthenticated ? "" : "";
-            var currentUser = _userManager.FindById(_userId);
-            return currentUser.UserName;
-        }
+       
         private ActionResult RedirectToLocal(string returnUrl)
         {
-            var userInR = User.IsInRole("User");
-
-            var isInRole = System.Web.HttpContext.Current.User.IsInRole("User");//_userManager.IsInRole(System.Web.HttpContext.Current.User.Identity.GetUserId(), "User");
-
-
 
             if (Url.IsLocalUrl(returnUrl))
             {
                 return Redirect(returnUrl);
-            }
-            if (User.IsInRole("Admin"))
-            {
-                RedirectToAction("Index", "AdminDashboard");
-            }
-            else if (User.IsInRole("User"))
-            {
-                RedirectToAction("Index", "Profile");
             }
             return RedirectToAction("Index", "Home");
         }

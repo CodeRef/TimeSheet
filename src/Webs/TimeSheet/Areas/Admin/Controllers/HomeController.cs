@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace TimeSheet.Controllers
+namespace TimeSheet.Areas.Admin.Controllers
 {
-    public class ProfileController : Controller
+    public class HomeController : BaseController
     {
-        // GET: Profile
+        // GET: Admin/Home
         public ActionResult Index()
         {
             return View();
