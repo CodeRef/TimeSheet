@@ -6,12 +6,9 @@ using System.Web.Mvc;
 
 namespace TimeSheet.Areas.UserProfile.Controllers
 {
-    public class HomeController : BaseController
+    [Authorize(Roles = "User")]
+    public class BaseController : Controller
     {
-        // GET: UserProfile/Home
-        public ActionResult Index()
-        {
-            return View();
-        }
+     
     }
 }

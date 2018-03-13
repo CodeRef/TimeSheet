@@ -184,7 +184,9 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProjectController.cs" />
     <Compile Include="Areas\SuperAdmin\SuperAdminAreaRegistration.cs" />
+    <Compile Include="Areas\UserProfile\Controllers\BaseController.cs" />
     <Compile Include="Areas\UserProfile\Controllers\HomeController.cs" />
     <Compile Include="Areas\UserProfile\UserProfileAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -295,6 +297,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Admin\Views\Project\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -351,6 +354,7 @@
     <Folder Include="Areas\SuperAdmin\Controllers\" />
     <Folder Include="Areas\SuperAdmin\Models\" />
     <Folder Include="Areas\UserProfile\Models\" />
+    <Folder Include="Areas\UserProfile\Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Model.csproj">
